@@ -7,9 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.mobileapplications22.R
 import com.example.mobileapplications22.Story
-import com.example.mobileapplications22.adapters.RcViewStoryAdapter
+import com.example.mobileapplications22.adapters.RvStoryAdapter
 import com.example.mobileapplications22.adapters.ViewPagerAdapter
 import com.example.mobileapplications22.databinding.FragmentProfileBinding
 import com.example.mobileapplications22.profile.fragments.BlankFragment1
@@ -20,7 +19,7 @@ class ProfileFragment : Fragment() {
 
     private lateinit var binding : FragmentProfileBinding
 
-    private lateinit var storyAdapter: RcViewStoryAdapter
+    private lateinit var storyAdapter: RvStoryAdapter
 
     private val fList = listOf(
         BlankFragment1.newInstance(), BlankFragment2.newInstance()
@@ -44,7 +43,7 @@ class ProfileFragment : Fragment() {
 
     private fun initRV() = with(binding){
         rcViewProfile.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL,false)
-        storyAdapter = RcViewStoryAdapter()
+        storyAdapter = RvStoryAdapter()
         rcViewProfile.adapter = storyAdapter
         val list = listOf(
             Story("","qweyuiop"),

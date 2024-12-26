@@ -10,12 +10,12 @@ import com.example.mobileapplications22.R
 import com.example.mobileapplications22.Story
 import com.example.mobileapplications22.databinding.ItemStoryBinding
 
-class RcViewStoryAdapter : ListAdapter<Story, RcViewStoryAdapter.Holder>(Comparator()) {
+class RvStoryAdapter : ListAdapter<Story, RvStoryAdapter.Holder>(Comparator()) {
 
     class Holder(view: View): RecyclerView.ViewHolder(view){
         val binding = ItemStoryBinding.bind(view)
-        fun bind(item: Story) = with(binding){
-            tvStoryText.text = item.storyText
+        fun bind(items: Story) = with(binding){
+            tvStoryText.text = items.storyText
         }
     }
 
